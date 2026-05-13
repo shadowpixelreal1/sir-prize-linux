@@ -1,0 +1,11 @@
+LB_BOOTSTRAP=debootstrap
+LB_BOOTSTRAP_FLAVOUR=minimal
+LB_ARCHITECTURES=amd64
+LB_MIRROR_BOOTSTRAP=http://archive.ubuntu.com/ubuntu/
+LB_MIRROR_CHROOT=http://archive.ubuntu.com/ubuntu/
+LB_MIRROR_BINARY=http://archive.ubuntu.com/ubuntu/
+LB_DISTRIBUTION=jammy
+LB_PARENT_DISTRIBUTION=jammy
+LB_PARENT_MIRROR_BOOTSTRAP=http://archive.ubuntu.com/ubuntu/
+LB_PARENT_MIRROR_CHROOT=http://archive.ubuntu.com/ubuntu/
+LB_PARENT_MIRROR_BINARY=http://archive.ubuntu.com/ubuntu/

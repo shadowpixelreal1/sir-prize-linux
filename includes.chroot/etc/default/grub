@@ -1,0 +1,16 @@
+# Sir Prize Linux GRUB config
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=8
+GRUB_DISTRIBUTOR="Sir Prize Linux"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+
+# Fancy terminal output
+GRUB_TERMINAL_OUTPUT="gfxterm"
+GRUB_GFXMODE="1280x800x32,1024x768x32,auto"
+GRUB_GFXPAYLOAD_LINUX=keep
+
+# Background color (purple-ish)
+GRUB_COLOR_NORMAL="light-magenta/black"
+GRUB_COLOR_HIGHLIGHT="white/light-magenta"

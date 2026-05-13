@@ -1,0 +1,22 @@
+    The Ballad of Sir Prize
+    âââââââââââââââââââââââ
+    In a land of GUIs and point-and-click,
+    A penguin said: "I'll do a trick.
+    I'll build an OS, fill it with delight,
+    With secrets hidden left and right."
+
+    The terminal opened, dark and wide,
+    And Tux stepped in with gleeful pride.
+    "Type 'surprise' to start the show,
+    Or 'secret' if you want to know
+
+    The hidden files, the buried jokes,
+    The ASCII art for all you folks.
+    The sandwich that sudo will make,
+    The fortunes earned for your own sake."
+
+    So boot it up and dive right in â
+    Sir Prize Linux wears a grin.
+    Each session holds a fresh delight:
+    Go explore. We'll be alright.
+

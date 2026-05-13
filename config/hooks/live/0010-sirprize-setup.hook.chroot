@@ -1,0 +1,167 @@
+#!/bin/bash
+# Sir Prize Linux â main customization hook
+# This runs as root inside the chroot during live-build.
+set -e
+
+echo "[SirPrize] Customizing the system..."
+
+# ââ 1. OS Identity ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+# os-release and issue are already included via includes.chroot
+
+# ââ 2. Hostname âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+echo "sirprize" > /etc/hostname
+cat > /etc/hosts << 'EOF'
+127.0.0.1   localhost
+127.0.1.1   sirprize
+::1         localhost ip6-localhost ip6-loopback
+ff02::1     ip6-allnodes
+ff02::2     ip6-allrouters
+EOF
+
+# ââ 3. Set executable bits on our custom commands âââââââââââââââââââââââââââââ
+chmod +x /usr/local/bin/surprise
+chmod +x /usr/local/bin/coffee
+chmod +x /usr/local/bin/magic
+chmod +x /usr/local/bin/secret
+chmod +x /usr/local/bin/party
+chmod +x /usr/local/bin/answer
+chmod +x /usr/local/bin/penguin
+chmod +x /usr/local/bin/vibecheck
+chmod +x /usr/local/bin/dance
+
+# ââ 4. Create default user ââââââââââââââââââââââââââââââââââââââââââââââââââââ
+useradd -m -s /bin/bash -G sudo,audio,video,plugdev,netdev user 2>/dev/null || true
+echo "user:sirprize" | chpasswd
+# Also set root password to something fun
+echo "root:iamroot42" | chpasswd
+
+# ââ 5. Profile.d script permissions ââââââââââââââââââââââââââââââââââââââââââ
+chmod +x /etc/profile.d/sirprize-welcome.sh
+
+# ââ 6. Update GRUB branding âââââââââââââââââââââââââââââââââââââââââââââââââââ
+if [ -f /usr/share/grub/unicode.pf2 ]; then
+    echo "GRUB: unicode font available"
+fi
+
+# ââ 7. Plymouth boot splash âââââââââââââââââââââââââââââââââââââââââââââââââââ
+# Install a text-mode boot splash with our branding
+if command -v plymouth-set-default-theme &>/dev/null; then
+    plymouth-set-default-theme text 2>/dev/null || true
+fi
+
+# ââ 8. Fun: Install nyancat from source âââââââââââââââââââââââââââââââââââââââ
+if command -v git &>/dev/null && command -v make &>/dev/null; then
+    cd /tmp
+    git clone --depth=1 https://github.com/nicowillis/nyancat.git 2>/dev/null || \
+    git clone --depth=1 https://github.com/klange/nyancat.git 2>/dev/null || true
+    if [ -d /tmp/nyancat ]; then
+        cd /tmp/nyancat/src
+        make 2>/dev/null && cp nyancat /usr/local/bin/ || true
+        cd /
+        rm -rf /tmp/nyancat
+    fi
+fi
+
+# ââ 9. asciiquarium via cpan ââââââââââââââââââââââââââââââââââââââââââââââââââ
+if command -v cpan &>/dev/null; then
+    PERL_MM_USE_DEFAULT=1 cpan Term::Animation 2>/dev/null || true
+fi
+
+# ââ 10. Custom XFCE wallpaper âââââââââââââââââââââââââââââââââââââââââââââââââ
+mkdir -p /usr/share/backgrounds/sir-prize
+# Copy our SVG wallpaper (included via includes.chroot)
+# It's at /usr/share/backgrounds/sir-prize/wallpaper.svg
+
+# Set as default lightdm background
+if [ -f /etc/lightdm/lightdm-gtk-greeter.conf ]; then
+    sed -i 's|#background=.*|background=/usr/share/backgrounds/sir-prize/wallpaper.svg|' \
+        /etc/lightdm/lightdm-gtk-greeter.conf
+fi
+
+# ââ 11. Configure XFCE default wallpaper via xfconf ââââââââââââââââââââââââââ
+# This sets it for any new user created
+cat > /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml << 'XFDESKTOP'
+<?xml version="1.0" encoding="UTF-8"?>
+<channel name="xfce4-desktop" version="1.0">
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="monitor0" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="image-path" type="string"
+            value="/usr/share/backgrounds/sir-prize/wallpaper.svg"/>
+          <property name="image-style" type="int" value="5"/>
+        </property>
+      </property>
+    </property>
+  </property>
+</channel>
+XFDESKTOP
+
+mkdir -p /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
+
+# ââ 12. Customize XFCE terminal colors âââââââââââââââââââââââââââââââââââââââ
+mkdir -p /etc/skel/.config/xfce4/terminal
+cat > /etc/skel/.config/xfce4/terminal/terminalrc << 'TERMRC'
+[Configuration]
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBellUrgent=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=100x30
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=FALSE
+MiscMouseAutohide=FALSE
+MiscMouseWheelZoom=TRUE
+MiscNewTabAdjacent=FALSE
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
+MiscSlimTabs=FALSE
+MiscUseShiftArrowScroll=TRUE
+MiscWarnVtCompatible=FALSE
+MiscZoomWithControlKey=FALSE
+BackgroundMode=TERMINAL_BACKGROUND_SOLID
+BackgroundDarkness=0.900000
+ColorForeground=#e0e0f0
+ColorBackground=#0d0d1a
+ColorBold=#ffffff
+ColorPalette=#000000;#ff5555;#50fa7b;#f1fa8c;#bd93f9;#ff79c6;#8be9fd;#bfbfbf;#555555;#ff5555;#50fa7b;#f1fa8c;#bd93f9;#ff79c6;#8be9fd;#ffffff
+FontName=Monospace 11
+TERMRC
+
+# ââ 13. sudoers: allow user passwordless sudo âââââââââââââââââââââââââââââââââ
+echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/user
+chmod 440 /etc/sudoers.d/user
+
+# ââ 14. Create a fun /etc/update-motd.d entry âââââââââââââââââââââââââââââââââ
+mkdir -p /etc/update-motd.d
+cat > /etc/update-motd.d/00-sir-prize << 'MOTDSCRIPT'
+#!/bin/bash
+cat /etc/motd
+MOTDSCRIPT
+chmod +x /etc/update-motd.d/00-sir-prize
+
+# ââ 15. Update grub âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+update-grub 2>/dev/null || true
+
+# ââ 16. Fun hidden bonus: a tiny snake game in /usr/local/games ââââââââââââââ
+mkdir -p /usr/local/games
+cat > /usr/local/games/pong.sh << 'PONGEOF'
+#!/bin/bash
+# Micro pong â a tiny ball bouncer for the terminal
+echo "ð Press Ctrl+C to quit."
+W=$(tput cols); H=$(tput lines)
+X=5; Y=5; DX=1; DY=1
+while true; do
+    clear
+    X=$(( X + DX )); Y=$(( Y + DY ))
+    (( X <= 0 || X >= W-1 )) && DX=$(( -DX ))
+    (( Y <= 0 || Y >= H-1 )) && DY=$(( -DY ))
+    tput cup $Y $X
+    printf "â"
+    sleep 0.05
+done
+PONGEOF
+chmod +x /usr/local/games/pong.sh
+echo "[SirPrize] All customizations applied!"

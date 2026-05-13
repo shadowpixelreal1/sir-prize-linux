@@ -1,0 +1,20 @@
+#!/bin/bash
+echo ""
+echo -e "\e[38;5;245m  Computing the answer to life, the universe,"
+echo -e "  and everything...\e[0m"
+sleep 1
+echo -e "\e[38;5;245m  Simulating Earth for 7.5 million years...\e[0m"
+sleep 0.5
+echo -e "\e[38;5;245m  Consulting Deep Thought...\e[0m"
+sleep 0.5
+echo ""
+figlet "42" 2>/dev/null | lolcat 2>/dev/null \
+    || echo -e "\e[38;5;220m              4 2\e[0m"
+echo ""
+echo -e "\e[38;5;199m  \"The Answer to the Great Question\e[0m"
+echo -e "\e[38;5;199m   of Life, the Universe and Everything\e[0m"
+echo -e "\e[38;5;199m   is... Forty-two.\"\e[0m"
+echo -e "\e[38;5;245m                  â Deep Thought, Hitchhiker's Guide\e[0m"
+echo ""
+echo -e "\e[38;5;81m  Now all we need is the right question.\e[0m"
+echo ""

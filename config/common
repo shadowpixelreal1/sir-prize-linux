@@ -1,0 +1,9 @@
+LB_DISTRIBUTION=jammy
+LB_PARENT_DISTRIBUTION=jammy
+LB_ARCHIVE_AREAS="main restricted universe multiverse"
+LB_PARENT_ARCHIVE_AREAS="main restricted universe multiverse"
+LB_DEBIAN_INSTALLER=none
+LB_DEBIAN_INSTALLER_GUI=false
+LB_HOSTNAME=sirprize
+LB_USERNAME=user
+LB_BOOTAPPEND_LIVE="boot=live components quiet splash username=user hostname=sirprize"

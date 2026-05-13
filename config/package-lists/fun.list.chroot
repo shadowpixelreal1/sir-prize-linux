@@ -1,0 +1,65 @@
+# Sir Prize Linux â fun package list
+# These are installed into the live system
+
+# Core fun terminal toys
+cowsay
+fortune-mod
+fortunes
+fortunes-min
+figlet
+lolcat
+cmatrix
+sl
+toilet
+libaa-bin
+
+# System eye-candy
+neofetch
+htop
+ncdu
+tree
+
+# Useful but fun
+vim
+git
+curl
+wget
+tmux
+screen
+
+# ASCII art and games
+bsdgames
+ninvaders
+bastet
+nsnake
+pacman4console
+moon-buggy
+
+# Dev essentials
+build-essential
+python3
+python3-pip
+nodejs
+npm
+
+# Media (lightweight)
+mpv
+
+# Desktop (minimal XFCE)
+xfce4
+xfce4-terminal
+xfce4-goodies
+lightdm
+lightdm-gtk-greeter
+network-manager
+network-manager-gnome
+firefox
+
+# Theming
+papirus-icon-theme
+arc-theme
+
+# Fonts
+fonts-noto
+fonts-noto-color-emoji
+fonts-powerline

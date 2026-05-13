@@ -1,0 +1,12 @@
+NAME="Sir Prize Linux"
+VERSION="1.0 (Pandora's Box Edition)"
+ID=sirprize
+ID_LIKE=ubuntu
+PRETTY_NAME="Sir Prize Linux 1.0 (Pandora's Box Edition)"
+VERSION_ID="1.0"
+HOME_URL="https://github.com/sirprize-linux"
+SUPPORT_URL="https://github.com/sirprize-linux/issues"
+BUG_REPORT_URL="https://github.com/sirprize-linux/issues"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=pandora
+UBUNTU_CODENAME=jammy

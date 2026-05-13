@@ -1,0 +1,70 @@
+#!/bin/bash
+# Second hook â Plymouth theme + final system polish
+set -e
+
+# Set Plymouth theme if available
+if command -v update-alternatives &>/dev/null && [ -d /usr/share/plymouth/themes/sir-prize ]; then
+    update-alternatives --install /usr/share/plymouth/themes/default.plymouth \
+        default.plymouth /usr/share/plymouth/themes/sir-prize/sir-prize.plymouth 100 \
+        2>/dev/null || true
+    update-initramfs -u 2>/dev/null || true
+fi
+
+# ââ Fun: Add a hidden file to /etc that only root would ever find âââââââââââââ
+cat > /etc/.the_answer << 'EOF'
+42
+EOF
+
+# ââ Fun: Add a "daily surprise" cron job for the user âââââââââââââââââââââââââ
+mkdir -p /etc/skel/.config/systemd/user
+# We'll use a simpler approach â a login shell trick in .bash_profile
+cat > /etc/skel/.bash_profile << 'PROFILE'
+# .bash_profile â Sir Prize Linux
+# Run .bashrc for interactive shells
+[[ -f ~/.bashrc ]] && source ~/.bashrc
+PROFILE
+
+# ââ Fun: Configure vim with a fun .vimrc âââââââââââââââââââââââââââââââââââââ
+cat > /etc/skel/.vimrc << 'VIMRC'
+" Sir Prize Linux default .vimrc
+" Because you deserve a decent editor experience
+
+syntax on
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set nowrap
+set ruler
+set showcmd
+set wildmenu
+set laststatus=2
+colorscheme desert
+
+" Sir Prize Easter egg: :surprise  opens a random fortune
+command! Surprise !fortune | cowsay | lolcat
+command! Coffee !coffee
+command! Magic !magic
+
+" Status line with a gift emoji
+set statusline=%F%m%r%h%w\ ð\ [%L\ lines]\ [%p%%]\ %=\ [%l,%c]
+VIMRC
+
+# ââ Remove default Ubuntu MOTD scripts (too noisy) âââââââââââââââââââââââââââ
+chmod -x /etc/update-motd.d/10-help-text 2>/dev/null || true
+chmod -x /etc/update-motd.d/50-motd-news 2>/dev/null || true
+chmod -x /etc/update-motd.d/80-livepatch 2>/dev/null || true
+chmod -x /etc/update-motd.d/90-updates-available 2>/dev/null || true
+chmod -x /etc/update-motd.d/91-release-upgrade 2>/dev/null || true
+chmod -x /etc/update-motd.d/95-hwe-eol 2>/dev/null || true
+
+# ââ Lock down dynamic MOTD, use our static one ââââââââââââââââââââââââââââââââ
+ln -sf /etc/motd /run/motd.dynamic 2>/dev/null || true
+
+echo "[SirPrize] Plymouth and final touches applied!"

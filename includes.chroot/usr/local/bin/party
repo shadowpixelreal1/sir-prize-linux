@@ -1,0 +1,10 @@
+#!/bin/bash
+echo ""
+figlet "PARTY TIME" 2>/dev/null | lolcat 2>/dev/null \
+    || echo -e "\e[38;5;199m  ð P A R T Y  T I M E  ð\e[0m"
+echo ""
+echo -e "\e[38;5;220m  ð Let's go! Ctrl+C when you've had enough.\e[0m"
+sleep 1
+cmatrix -C magenta 2>/dev/null \
+    || (toilet -f bigmono9 --gay "PARTY!" 2>/dev/null \
+    || echo -e "\e[38;5;199m  ð The party is in your heart!\e[0m")

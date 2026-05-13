@@ -1,0 +1,8 @@
+LB_BOOTLOADER_BIOS=grub-pc
+LB_BOOTLOADER_EFI=grub-efi
+LB_GRUB_THEME=
+LB_ISO_APPLICATION="Sir Prize Linux"
+LB_ISO_PREPARER="Sir Prize Linux Project"
+LB_ISO_PUBLISHER="Sir Prize Linux"
+LB_ISO_VOLUME="Sir Prize Linux 1.0"
+LB_MEMTEST=none

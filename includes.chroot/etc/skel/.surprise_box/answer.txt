@@ -1,0 +1,21 @@
+    ___    ___
+   /   \  /   \
+  | 4   || 2   |
+   \___/  \___/
+
+The answer to Riddle #1: A MAP
+
+The answer to life, the universe, and everything: 42
+
+Douglas Adams knew. The question was never the problem.
+The question â the REAL question â is what question produces 42.
+
+Some say it's "What is 6 times 7?"
+Some say it's "What is the meaning of life?"
+
+Sir Prize Linux says:
+  The question is "How many Easter eggs are in this distro?"
+
+  ...and the answer is still 42.
+  (We may have exaggerated. There are 11.
+   Can you find all 11?)

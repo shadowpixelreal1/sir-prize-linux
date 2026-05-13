@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -e "\e[38;5;220m  ð Here comes the train! (Ctrl+C to stop it)\e[0m"
+sleep 0.5
+sl -e 2>/dev/null \
+    || echo -e "\e[38;5;220m  ðð¨ Choo choo! (sl not installed yet)\e[0m"

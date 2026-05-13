@@ -1,0 +1,33 @@
+#!/bin/sh
+# Sir Prize Linux custom GRUB header
+
+cat << 'GRUBMENU'
+# Add our fun header message to GRUB
+insmod gfxterm
+insmod vbe
+insmod font
+
+if [ "${grub_platform}" = "efi" ]; then
+  insmod linuxefi
+fi
+
+# Set colors: magenta text on black
+set color_normal=light-magenta/black
+set color_highlight=white/magenta
+set menu_color_normal=cyan/black
+set menu_color_highlight=white/magenta
+
+GRUBMENU
+
+# Export a fun title
+cat << 'EOF'
+menuentry "ð Sir Prize Linux 1.0 â Welcome, adventurer!" {
+    # This is just a display entry â the real boot entries are generated
+    # by 10_linux below. We use this to show a fun title.
+    echo "Loading Sir Prize Linux..."
+    echo ""
+    echo "   Every boot is a gift."
+    echo "   Secrets await."
+    echo ""
+}
+EOF

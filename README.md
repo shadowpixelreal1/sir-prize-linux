@@ -1,4 +1,4 @@
-# ð Sir Prize Linux v1.0 â *Pandora's Box Edition*
+#  Sir Prize Linux v1.0 â *Pandora's Box Edition*
 
 > **"Every boot is a gift."**
 
@@ -8,7 +8,7 @@ penguin smile. It's based on **Ubuntu 22.04 LTS (Jammy)** with XFCE desktop.
 
 ---
 
-## ð Building the ISO
+##  Building the ISO
 
 ### Requirements
 | Thing | Min |
@@ -30,7 +30,7 @@ The build takes ~20â40 minutes. The output ISO will be named `sir-prize-lin
 
 ---
 
-## ð§ª Testing the ISO
+##  Testing the ISO
 
 **QEMU (fastest):**
 ```bash
@@ -53,7 +53,7 @@ sudo sync
 
 ---
 
-## ð Default Credentials
+##  Default Credentials
 
 | Account | Password |
 |---------|----------|
@@ -62,7 +62,7 @@ sudo sync
 
 ---
 
-## ð­ What's Hidden Inside
+##  What's Hidden Inside
 
 ### Terminal Easter Eggs
 Type these commands in any terminal:
@@ -80,7 +80,7 @@ Type these commands in any terminal:
 | `dance` | Steam locomotive (sl) across the screen |
 | `matrix` | `cmatrix -s -b` |
 | `choo` | Alias for `dance` |
-| `hug` | You need a hug ð¤ |
+| `hug` | You need a hug  |
 | `dontpanic` | `figlet "DON'T PANIC" \| lolcat` |
 | `vibecheck` | Check those vibes |
 
@@ -126,11 +126,11 @@ sudo cat /etc/.the_answer
 ```
 
 ### The Rainbow Prompt
-The terminal prompt is a beautiful `ð user@host:~/path âº` in purple/cyan/gold.
+The terminal prompt is a beautiful ` user@host:~/path âº` in purple/cyan/gold.
 
 ---
 
-## ð¨ Visual Touches
+##  Visual Touches
 
 - **Wallpaper**: Custom SVG space/nebula scene with a glowing gift box, stars, and shooting stars
 - **Terminal**: Dracula-inspired color scheme (purple background, neon accents)
@@ -142,7 +142,7 @@ The terminal prompt is a beautiful `ð user@host:~/path âº` in purple/
 
 ---
 
-## ð¦ Pre-installed Packages
+##  Pre-installed Packages
 
 **Fun stuff:** cowsay, fortune-mod, fortunes, figlet, lolcat, cmatrix, sl, toilet, libaa-bin, nyancat (built from source), asciiquarium
 
@@ -158,7 +158,7 @@ The terminal prompt is a beautiful `ð user@host:~/path âº` in purple/
 
 ---
 
-## ðï¸ Repository Structure
+##  Repository Structure
 
 ```
 sir-prize-linux/
@@ -204,7 +204,7 @@ sir-prize-linux/
 
 ---
 
-## ð¡ Troubleshooting
+##  Troubleshooting
 
 **Build fails with "Chroot failed":**
 Make sure you have internet access and at least 20 GB free.
@@ -224,7 +224,7 @@ sudo ./build.sh
 
 ---
 
-## ð§ Credits
+##  Credits
 
 Built with love, `live-build`, and an unhealthy obsession with ASCII art.
 Based on Ubuntu 22.04 LTS. Tux approves.

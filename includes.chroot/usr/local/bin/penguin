@@ -1,0 +1,24 @@
+#!/bin/bash
+echo ""
+echo -e "\e[38;5;81m"
+cat << 'TUXART'
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+TUXART
+echo -e "\e[0m"
+MESSAGES=(
+    "  ð§ Hi! I'm Tux. I run everything here."
+    "  ð§ \"I am your operating system. Resistance is futile.\""
+    "  ð§ \"Have you tried turning me off and on again?\""
+    "  ð§ \"I have no bugs. Only features.\""
+    "  ð§ \"I live in your kernel. Always watching. Always compiling.\""
+    "  ð§ \"Free as in freedom AND free as in free pizza.\""
+)
+IDX=$(( RANDOM % ${#MESSAGES[@]} ))
+echo -e "\e[38;5;220m${MESSAGES[$IDX]}\e[0m"
+echo ""

@@ -1,0 +1,3 @@
+# Sir Prize Linux Plymouth script (text-based, widely compatible)
+Window.SetBackgroundTopColor (0.11, 0.00, 0.40);
+Window.SetBackgroundBottomColor (0.00, 0.00, 0.10);

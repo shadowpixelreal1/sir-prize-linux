@@ -139,7 +139,7 @@ mkdir -p /etc/update-motd.d
 cat > /etc/update-motd.d/00-sir-prize << 'MOTDSCRIPT'
 #!/bin/bash
 cat /etc/motd
-MOTDSCRIPT
+MOTDMCRIPT
 chmod +x /etc/update-motd.d/00-sir-prize
 
 # ââ 15. Update grub âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
@@ -150,7 +150,7 @@ mkdir -p /usr/local/games
 cat > /usr/local/games/pong.sh << 'PONGEOF'
 #!/bin/bash
 # Micro pong â a tiny ball bouncer for the terminal
-echo "ð Press Ctrl+C to quit."
+echo " Press Ctrl+C to quit."
 W=$(tput cols); H=$(tput lines)
 X=5; Y=5; DX=1; DY=1
 while true; do

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Deep space gradient background -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a0533"/>
+      <stop offset="50%" stop-color="#0a0a1e"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <!-- Nebula glow -->
+    <radialGradient id="neb1" cx="30%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#8b00ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b00ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neb2" cx="70%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="#ff00aa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ff00aa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neb3" cx="55%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#00aaff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00aaff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Gift box glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#neb1)"/>
+  <rect width="1920" height="1080" fill="url(#neb2)"/>
+  <rect width="1920" height="1080" fill="url(#neb3)"/>
+
+  <!-- Stars â layer 1 (tiny) -->
+  <g fill="white" opacity="0.6">
+    <circle cx="45" cy="78" r="0.8"/><circle cx="120" cy="23" r="0.6"/>
+    <circle cx="203" cy="145" r="0.9"/><circle cx="334" cy="67" r="0.7"/>
+    <circle cx="412" cy="198" r="0.8"/><circle cx="523" cy="34" r="1.0"/>
+    <circle cx="634" cy="156" r="0.6"/><circle cx="745" cy="89" r="0.9"/>
+    <circle cx="856" cy="212" r="0.7"/><circle cx="967" cy="45" r="0.8"/>
+    <circle cx="1078" cy="178" r="1.0"/><circle cx="1189" cy="56" r="0.6"/>
+    <circle cx="1300" cy="134" r="0.9"/><circle cx="1411" cy="23" r="0.7"/>
+    <circle cx="1522" cy="167" r="0.8"/><circle cx="1633" cy="78" r="1.0"/>
+    <circle cx="1744" cy="201" r="0.6"/><circle cx="1855" cy="45" r="0.9"/>
+    <circle cx="78" cy="267" r="0.7"/><circle cx="189" cy="345" r="0.8"/>
+    <circle cx="300" cy="289" r="1.0"/><circle cx="411" cy="412" r="0.6"/>
+    <circle cx="522" cy="356" r="0.9"/><circle cx="633" cy="489" r="0.7"/>
+    <circle cx="744" cy="423" r="0.8"/><circle cx="855" cy="556" r="1.0"/>
+    <circle cx="966" cy="489" r="0.6"/><circle cx="1077" cy="612" r="0.9"/>
+    <circle cx="1188" cy="545" r="0.7"/><circle cx="1299" cy="678" r="0.8"/>
+    <circle cx="1410" cy="601" r="1.0"/><circle cx="1521" cy="734" r="0.6"/>
+    <circle cx="1632" cy="667" r="0.9"/><circle cx="1743" cy="790" r="0.7"/>
+    <circle cx="1854" cy="712" r="0.8"/><circle cx="90" cy="823" r="1.0"/>
+    <circle cx="201" cy="867" r="0.6"/><circle cx="312" cy="934" r="0.9"/>
+    <circle cx="423" cy="989" r="0.7"/><circle cx="534" cy="845" r="0.8"/>
+    <circle cx="645" cy="912" r="1.0"/><circle cx="756" cy="967" r="0.6"/>
+    <circle cx="867" cy="878" r="0.9"/><circle cx="978" cy="1023" r="0.7"/>
+    <circle cx="1089" cy="934" r="0.8"/><circle cx="1200" cy="989" r="1.0"/>
+    <circle cx="1311" cy="845" r="0.6"/><circle cx="1422" cy="901" r="0.9"/>
+    <circle cx="1533" cy="956" r="0.7"/><circle cx="1644" cy="823" r="0.8"/>
+    <circle cx="1755" cy="878" r="1.0"/><circle cx="1866" cy="934" r="0.6"/>
+  </g>
+
+  <!-- Stars â layer 2 (bright) -->
+  <g fill="white" opacity="0.9">
+    <circle cx="156" cy="189" r="1.5"/><circle cx="389" cy="78" r="1.8"/>
+    <circle cx="567" cy="267" r="1.4"/><circle cx="789" cy="134" r="1.7"/>
+    <circle cx="912" cy="356" r="1.5"/><circle cx="1134" cy="89" r="1.8"/>
+    <circle cx="1356" cy="245" r="1.4"/><circle cx="1578" cy="167" r="1.7"/>
+    <circle cx="1800" cy="312" r="1.5"/><circle cx="234" cy="534" r="1.8"/>
+    <circle cx="478" cy="701" r="1.4"/><circle cx="701" cy="623" r="1.7"/>
+    <circle cx="923" cy="745" r="1.5"/><circle cx="1145" cy="689" r="1.8"/>
+    <circle cx="1367" cy="812" r="1.4"/><circle cx="1589" cy="756" r="1.7"/>
+    <circle cx="1811" cy="889" r="1.5"/>
+  </g>
+
+  <!-- Shooting star 1 -->
+  <line x1="200" y1="150" x2="380" y2="180" stroke="white" stroke-width="1.5"
+        stroke-linecap="round" opacity="0.7"/>
+  <!-- Shooting star 2 -->
+  <line x1="1400" y1="200" x2="1560" y2="230" stroke="white" stroke-width="1.2"
+        stroke-linecap="round" opacity="0.5"/>
+
+  <!-- ââââââââââ CENTRAL GIFT BOX ââââââââââ -->
+  <g transform="translate(810, 290)" filter="url(#glow)">
+    <!-- Box body -->
+    <rect x="0" y="130" width="300" height="240" rx="8"
+          fill="#2d0066" stroke="#9933ff" stroke-width="3"/>
+    <!-- Box lid -->
+    <rect x="-15" y="100" width="330" height="50" rx="6"
+          fill="#4400aa" stroke="#bb44ff" stroke-width="3"/>
+    <!-- Vertical ribbon on box -->
+    <rect x="130" y="100" width="40" height="270" rx="4"
+          fill="#ff44cc" stroke="#ff88ee" stroke-width="1.5" opacity="0.9"/>
+    <!-- Horizontal ribbon on lid -->
+    <rect x="-15" y="115" width="330" height="20" rx="4"
+          fill="#ff44cc" stroke="#ff88ee" stroke-width="1.5" opacity="0.9"/>
+    <!-- Bow left loop -->
+    <ellipse cx="120" cy="90" rx="55" ry="35" fill="#ff44cc"
+             stroke="#ff88ee" stroke-width="2" transform="rotate(-30, 120, 90)" opacity="0.95"/>
+    <!-- Bow right loop -->
+    <ellipse cx="180" cy="90" rx="55" ry="35" fill="#ff44cc"
+             stroke="#ff88ee" stroke-width="2" transform="rotate(30, 180, 90)" opacity="0.95"/>
+    <!-- Bow center knot -->
+    <circle cx="150" cy="95" r="18" fill="#ff88ee" stroke="#ffbbff" stroke-width="2"/>
+    <!-- Sparkles around box -->
+    <text x="-60" y="60" font-size="30" fill="#ffdd00" opacity="0.9">â¨</text>
+    <text x="290" y="80" font-size="24" fill="#ffdd00" opacity="0.8">â­</text>
+    <text x="-40" y="320" font-size="20" fill="#ff88ee" opacity="0.7">ð</text>
+    <text x="300" y="350" font-size="26" fill="#aaff00" opacity="0.8">â¦</text>
+    <!-- Stars on box -->
+    <text x="30" y="220" font-size="18" fill="#ccaaff" opacity="0.6">â</text>
+    <text x="220" y="280" font-size="14" fill="#ccaaff" opacity="0.5">â</text>
+    <text x="60" y="340" font-size="16" fill="#ccaaff" opacity="0.6">â</text>
+  </g>
+
+  <!-- ââââââââââ TITLE TEXT ââââââââââ -->
+  <!-- Main title shadow -->
+  <text x="963" y="653" text-anchor="middle" font-family="'Ubuntu', 'DejaVu Sans', sans-serif"
+        font-size="88" font-weight="bold" fill="#1a0040" opacity="0.6"
+        letter-spacing="4">SIR PRIZE LINUX</text>
+  <!-- Main title -->
+  <text x="960" y="650" text-anchor="middle" font-family="'Ubuntu', 'DejaVu Sans', sans-serif"
+        font-size="88" font-weight="bold" fill="url(#titleGrad)"
+        letter-spacing="4">
+    <tspan fill="#e066ff">SIR</tspan>
+    <tspan fill="#ffffff"> </tspan>
+    <tspan fill="#cc44ff">PRIZE</tspan>
+    <tspan fill="#ffffff"> </tspan>
+    <tspan fill="#aa88ff">LINUX</tspan>
+  </text>
+  <!-- Subtitle -->
+  <text x="960" y="710" text-anchor="middle" font-family="'Ubuntu', 'DejaVu Sans', sans-serif"
+        font-size="28" fill="#cc88ff" letter-spacing="8" opacity="0.9">PANDORA'S BOX EDITION</text>
+  <!-- Tagline -->
+  <text x="960" y="760" text-anchor="middle" font-family="'Ubuntu', 'DejaVu Sans', sans-serif"
+        font-size="20" fill="#9966cc" letter-spacing="3" opacity="0.7"
+        font-style="italic">Every boot is a gift.   ð</text>
+
+  <!-- Decorative line under title -->
+  <line x1="560" y1="780" x2="1360" y2="780" stroke="#6600cc"
+        stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+
+  <!-- Version badge -->
+  <rect x="855" y="800" width="210" height="40" rx="20"
+        fill="#2d0066" stroke="#9933ff" stroke-width="1.5" opacity="0.8"/>
+  <text x="960" y="825" text-anchor="middle" font-family="monospace"
+        font-size="16" fill="#cc88ff" letter-spacing="2">v1.0</text>
+
+  <!-- Corner decorations -->
+  <text x="30" y="60" font-size="40" opacity="0.3">â¦</text>
+  <text x="1850" y="60" font-size="40" opacity="0.3">â¦</text>
+  <text x="30" y="1060" font-size="40" opacity="0.3">â¦</text>
+  <text x="1850" y="1060" font-size="40" opacity="0.3">â¦</text>
+</svg>

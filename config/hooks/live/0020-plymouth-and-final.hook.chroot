@@ -53,7 +53,7 @@ command! Coffee !coffee
 command! Magic !magic
 
 " Status line with a gift emoji
-set statusline=%F%m%r%h%w\ ð\ [%L\ lines]\ [%p%%]\ %=\ [%l,%c]
+set statusline=%F%m%r%h%w\ \ [%L\ lines]\ [%p%%]\ %=\ [%l,%c]
 VIMRC
 
 # ââ Remove default Ubuntu MOTD scripts (too noisy) âââââââââââââââââââââââââââ

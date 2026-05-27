@@ -18,7 +18,7 @@ Welcome, Windows explorer! This guide walks you through booting or running Sir P
 4. Click **START** â accept the warning â wait a few minutes.
 5. Reboot, enter your BIOS/boot menu (usually F12, F2, or Del), and boot from USB.
 
-ð Once booted: log in as `user` / password `sirprize` â and type `surprise` in the terminal!
+ Once booted: log in as `user` / password `sirprize` â and type `surprise` in the terminal!
 
 ---
 
@@ -47,7 +47,7 @@ Welcome, Windows explorer! This guide walks you through booting or running Sir P
 4. On the **Storage** screen, click the empty CD icon â **Choose a disk file** â select `sir-prize-linux.iso`.
 5. Click **Start**!
 
-ð Once booted in the VM: log in as `user` / `sirprize` and start exploring Easter eggs.
+ Once booted in the VM: log in as `user` / `sirprize` and start exploring Easter eggs.
 
 ---
 
@@ -60,7 +60,7 @@ If you want to build the ISO from source (the scripts in this repo), you'll need
 
 ---
 
-## ð Default Credentials
+##  Default Credentials
 
 | Account | Username | Password     |
 |---------|----------|--------------|
@@ -69,7 +69,7 @@ If you want to build the ISO from source (the scripts in this repo), you'll need
 
 ---
 
-## ð First Things to Try
+##  First Things to Try
 
 Once you're booted, open a terminal and try:
 
@@ -83,11 +83,11 @@ penguin        # meet Tux
 coffee         # you deserve a break
 magic          # abracadabra
 dance          # choo choo
-sudo make me a sandwich   # ð¥ª
+sudo make me a sandwich   # 
 ```
 
 Also run: `ls -la ~` for hidden treasure files.
 
 ---
 
-*Sir Prize Linux â Every boot is a gift. ð*
+*Sir Prize Linux â Every boot is a gift. *

@@ -1,7 +1,7 @@
 #!/bin/bash
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 # â  Sir Prize Linux â local Easter egg tester                  â
-# â  Run this on any Ubuntu/Debian box to preview the fun bits   â
+# â  Run this on any Ubuntu/Debian box to preview the fun bits  â
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 #
 # Usage:  bash test-locally.sh
@@ -25,7 +25,7 @@ source "$SKEL/.bash_aliases" 2>/dev/null || true
 
 echo ""
 echo -e "\e[38;5;213mââââââââââââââââââââââââââââââââââââââââââââ\e[0m"
-echo -e "\e[38;5;213mâÕ  Sir Prize Linux â Easter Egg Preview   â\e[0m"
+echo -e "\e[38;5;213mâ  Sir Prize Linux â Easter Egg Preview   â\e[0m"
 echo -e "\e[38;5;213mââââââââââââââââââââââââââââââââââââââââââââ\e[0m"
 echo ""
 
@@ -39,5 +39,5 @@ for cmd in "${COMMANDS[@]}"; do
 done
 
 echo ""
-echo -e "\e[38;5;119mâ  Preview complete! Run sudo ./build.sh to build the full ISO.\e[0m"
+echo -e "\e[38;5;119m    Preview complete! Run sudo ./build.sh to build the full ISO.\e[0m"
 echo ""

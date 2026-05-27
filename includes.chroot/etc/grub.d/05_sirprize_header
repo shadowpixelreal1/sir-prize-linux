@@ -21,7 +21,7 @@ GRUBMENU
 
 # Export a fun title
 cat << 'EOF'
-menuentry "ð Sir Prize Linux 1.0 â Welcome, adventurer!" {
+menuentry " Sir Prize Linux 1.0 â Welcome, adventurer!" {
     # This is just a display entry â the real boot entries are generated
     # by 10_linux below. We use this to show a fun title.
     echo "Loading Sir Prize Linux..."

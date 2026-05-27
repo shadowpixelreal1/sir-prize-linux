@@ -1,0 +1,63 @@
+#!/bin/bash
+# The surprise command â runs something random and delightful.
+
+CHOICES=(
+    "cowsay"
+    "cmatrix"
+    "sl"
+    "figlet"
+    "fortune_cow"
+    "nyan"
+    "toilet"
+    "aafire"
+    "asciiquarium"
+)
+
+PICK="${CHOICES[$((RANDOM % ${#CHOICES[@]}))]}"
+
+case "$PICK" in
+    cowsay)
+        MSG=$(fortune 2>/dev/null || echo "You are wonderfully weird.")
+        echo "$MSG" | cowsay -f "$(ls /usr/share/cowsay/cows/ 2>/dev/null | shuf -n1 | sed 's/\.cow//')" 2>/dev/null \
+            || echo "$MSG" | cowsay
+        ;;
+    cmatrix)
+        echo "ð¾ Entering the Matrix... (Ctrl+C to exit)"
+        sleep 1
+        cmatrix -s -b 2>/dev/null || echo "The Matrix has you... but cmatrix isn't installed yet."
+        ;;
+    sl)
+        sl -e 2>/dev/null || echo "ð Choo choo! (sl not installed yet)"
+        ;;
+    figlet)
+        WORDS=("SURPRISE" "SIR PRIZE" "AMAZING" "WOW" "HELLO" "HOORAY" "LINUX")
+        WORD="${WORDS[$((RANDOM % ${#WORDS[@]}))]}"
+        figlet "$WORD" 2>/dev/null | lolcat 2>/dev/null \
+            || echo "â¨ $WORD â¨"
+        ;;
+    fortune_cow)
+        fortune 2>/dev/null | cowsay -f tux 2>/dev/null | lolcat 2>/dev/null \
+            || fortune 2>/dev/null | cowsay 2>/dev/null \
+            || echo "Fortune: Be excellent to each other."
+        ;;
+    nyan)
+        nyancat 2>/dev/null || echo "ð± Nyan nyan nyan! (nyancat not installed yet)"
+        ;;
+    toilet)
+        MSGS=("PARTY" "WOW" "COOL" "YAY" "NICE")
+        MSG="${MSGS[$((RANDOM % ${#MSGS[@]}))]}"
+        toilet -f bigmono9 --gay "$MSG" 2>/dev/null \
+            || figlet "$MSG" 2>/dev/null | lolcat 2>/dev/null \
+            || echo "ð $MSG ð"
+        ;;
+    aafire)
+        echo "ð¥ Press any key to exit the fire!"
+        sleep 1
+        aafire 2>/dev/null || echo "ð¥ (aafire not installed yet)"
+        ;;
+    asciiquarium)
+        echo "ð Welcome to the aquarium! (Ctrl+C to exit)"
+        sleep 1
+        asciiquarium 2>/dev/null || echo "ð  (asciiquarium not installed yet)"
+        ;;
+esac

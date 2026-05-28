@@ -110,14 +110,14 @@
     <!-- Bow center knot -->
     <circle cx="150" cy="95" r="18" fill="#ff88ee" stroke="#ffbbff" stroke-width="2"/>
     <!-- Sparkles around box -->
-    <text x="-60" y="60" font-size="30" fill="#ffdd00" opacity="0.9">â¨</text>
-    <text x="290" y="80" font-size="24" fill="#ffdd00" opacity="0.8">â­</text>
-    <text x="-40" y="320" font-size="20" fill="#ff88ee" opacity="0.7">ð</text>
-    <text x="300" y="350" font-size="26" fill="#aaff00" opacity="0.8">â¦</text>
+    <text x="-60" y="60" font-size="30" fill="#ffdd00" opacity="0.9"></text>
+    <text x="290" y="80" font-size="24" fill="#ffdd00" opacity="0.8"></text>
+    <text x="-40" y="320" font-size="20" fill="#ff88ee" opacity="0.7"></text>
+    <text x="300" y="350" font-size="26" fill="#aaff00" opacity="0.8"></text>
     <!-- Stars on box -->
-    <text x="30" y="220" font-size="18" fill="#ccaaff" opacity="0.6">â</text>
-    <text x="220" y="280" font-size="14" fill="#ccaaff" opacity="0.5">â</text>
-    <text x="60" y="340" font-size="16" fill="#ccaaff" opacity="0.6">â</text>
+    <text x="30" y="220" font-size="18" fill="#ccaaff" opacity="0.6"></text>
+    <text x="220" y="280" font-size="14" fill="#ccaaff" opacity="0.5"></text>
+    <text x="60" y="340" font-size="16" fill="#ccaaff" opacity="0.6"></text>
   </g>
 
   <!-- ââââââââââ TITLE TEXT ââââââââââ -->
@@ -141,7 +141,7 @@
   <!-- Tagline -->
   <text x="960" y="760" text-anchor="middle" font-family="'Ubuntu', 'DejaVu Sans', sans-serif"
         font-size="20" fill="#9966cc" letter-spacing="3" opacity="0.7"
-        font-style="italic">Every boot is a gift.   ð</text>
+        font-style="italic">Every boot is a gift.   </text>
 
   <!-- Decorative line under title -->
   <line x1="560" y1="780" x2="1360" y2="780" stroke="#6600cc"
@@ -154,8 +154,8 @@
         font-size="16" fill="#cc88ff" letter-spacing="2">v1.0</text>
 
   <!-- Corner decorations -->
-  <text x="30" y="60" font-size="40" opacity="0.3">â¦</text>
-  <text x="1850" y="60" font-size="40" opacity="0.3">â¦</text>
-  <text x="30" y="1060" font-size="40" opacity="0.3">â¦</text>
-  <text x="1850" y="1060" font-size="40" opacity="0.3">â¦</text>
+  <text x="30" y="60" font-size="40" opacity="0.3"></text>
+  <text x="1850" y="60" font-size="40" opacity="0.3"></text>
+  <text x="30" y="1060" font-size="40" opacity="0.3"></text>
+  <text x="1850" y="1060" font-size="40" opacity="0.3"></text>
 </svg>

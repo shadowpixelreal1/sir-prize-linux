@@ -1,5 +1,5 @@
 #!/bin/bash
-# â You deserve a break.
+#  You deserve a break.
 
 echo ""
 echo -e "\e[38;5;130m"
@@ -12,7 +12,7 @@ cat << 'ART'
      `----'
 ART
 echo -e "\e[0m"
-echo -e "\e[38;5;220m  â  Here is your coffee.\e[0m"
+echo -e "\e[38;5;220m   Here is your coffee.\e[0m"
 echo ""
 HAIKU=(
     "    Code is poetry.\n    But first: a hot cup of joe.\n    Then, fix the bug."

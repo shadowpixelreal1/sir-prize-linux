@@ -1,4 +1,4 @@
-#  Sir Prize Linux v1.0 â *Pandora's Box Edition*
+#  Sir Prize Linux v1.0 -- *Pandora's Box Edition*
 
 > **"Every boot is a gift."**
 
@@ -26,7 +26,7 @@ cd sir-prize-linux
 sudo ./build.sh
 ```
 
-The build takes ~20â40 minutes. The output ISO will be named `sir-prize-linux-1.0.iso`.
+The build takes ~20-40 minutes. The output ISO will be named `sir-prize-linux-1.0.iso`.
 
 ---
 
@@ -39,14 +39,14 @@ qemu-system-x86_64 -m 2048 -cdrom sir-prize-linux-1.0.iso -boot d
 ```
 
 **VirtualBox:**
-1. New VM â Linux â Ubuntu 64-bit
+1. New VM -> Linux -> Ubuntu 64-bit
 2. 2+ GB RAM, no hard disk needed
-3. Settings â Storage â attach the ISO
+3. Settings -> Storage -> attach the ISO
 4. Boot!
 
 **Real hardware (USB):**
 ```bash
-# Replace /dev/sdX with YOUR USB drive â double-check with lsblk!
+# Replace /dev/sdX with YOUR USB drive -- double-check with lsblk!
 sudo dd if=sir-prize-linux-1.0.iso of=/dev/sdX bs=4M status=progress
 sudo sync
 ```
@@ -69,7 +69,7 @@ Type these commands in any terminal:
 
 | Command | What happens |
 |---------|-------------|
-| `surprise` | Random delight â one of 9 possible surprises |
+| `surprise` | Random delight -- one of 9 possible surprises |
 | `coffee` | ASCII coffee art + programming haiku |
 | `magic` | `figlet ABRACADABRA \| lolcat` + fortune |
 | `secret` | Reveals the secret file map |
@@ -102,18 +102,18 @@ the existence of hidden secrets.
 ls -la ~
 ```
 Look for:
-- `~/.treasure` â the treasure chest (start here)
-- `~/.secret_menu` â complete Easter egg guide
-- `~/.surprise_box/` â a box with riddles, poems, and the answer
-  - `riddle.txt` â 4 riddles
-  - `answer.txt` â the real answer (42)
-  - `poem.txt` â The Ballad of Sir Prize
+- `~/.treasure` -- the treasure chest (start here)
+- `~/.secret_menu` -- complete Easter egg guide
+- `~/.surprise_box/` -- a box with riddles, poems, and the answer
+  - `riddle.txt` -- 4 riddles
+  - `answer.txt` -- the real answer (42)
+  - `poem.txt` -- The Ballad of Sir Prize
 
 ### Vim Easter Eggs
 Inside vim:
-- `:Surprise` â fortune + cowsay + lolcat
-- `:Coffee` â you know what it does
-- `:Magic` â abracadabra
+- `:Surprise` -- fortune + cowsay + lolcat
+- `:Coffee` -- you know what it does
+- `:Magic` -- abracadabra
 
 ### Hidden Root File
 ```bash
@@ -126,7 +126,7 @@ sudo cat /etc/.the_answer
 ```
 
 ### The Rainbow Prompt
-The terminal prompt is a beautiful ` user@host:~/path âº` in purple/cyan/gold.
+The terminal prompt is a beautiful ` user@host:~/path ?` in purple/cyan/gold.
 
 ---
 
@@ -162,44 +162,44 @@ The terminal prompt is a beautiful ` user@host:~/path âº` in purple/cyan/gol
 
 ```
 sir-prize-linux/
-âââ build.sh                          # â RUN THIS
-âââ README.md                         # You are here
-âââ config/
-â   âââ bootstrap                     # live-build bootstrap config
-â   âââ common                        # live-build common config
-â   âââ binary                        # live-build binary/ISO config
-â   âââ package-lists/
-â   â   âââ fun.list.chroot           # packages to install
-â   âââ hooks/live/
-â       âââ 0010-sirprize-setup.hook.chroot   # main customization
-â       âââ 0020-plymouth-and-final.hook.chroot
-âââ includes.chroot/                  # files dropped into the live system
-    âââ etc/
-    â   âââ motd                      # message of the day
-    â   âââ issue                     # pre-login ASCII banner
-    â   âââ os-release                # distro identity
-    â   âââ default/grub              # GRUB config
-    â   âââ grub.d/05_sirprize_header # GRUB menu header
-    â   âââ profile.d/
-    â   â   âââ sirprize-welcome.sh   # login welcome + quotes
-    â   âââ skel/                     # template for new user homes
-    â       âââ .bashrc               # rainbow prompt + sandwich Easter egg
-    â       âââ .bash_aliases         # fun aliases
-    â       âââ .treasure             # hidden treasure file
-    â       âââ .secret_menu          # secret command list
-    â       âââ .surprise_box/        # surprise box contents
-    â       â   âââ riddle.txt
-    â       â   âââ answer.txt
-    â       â   âââ poem.txt
-    â       âââ .config/
-    â           âââ neofetch/config.conf
-    âââ usr/
-        âââ local/bin/                # Easter egg commands
-        â   âââ surprise, coffee, magic, secret
-        â   âââ party, answer, penguin, vibecheck, dance
-        â   âââ (pong in /usr/local/games/)
-        âââ share/backgrounds/sir-prize/
-            âââ wallpaper.svg         # custom space wallpaper
+|-- build.sh                          # <- RUN THIS
+|-- README.md                         # You are here
+|-- config/
+|   |-- bootstrap                     # live-build bootstrap config
+|   |-- common                        # live-build common config
+|   |-- binary                        # live-build binary/ISO config
+|   |-- package-lists/
+|   |   \-- fun.list.chroot           # packages to install
+|   \-- hooks/live/
+|       |-- 0010-sirprize-setup.hook.chroot   # main customization
+|       \-- 0020-plymouth-and-final.hook.chroot
+\-- includes.chroot/                  # files dropped into the live system
+    |-- etc/
+    |   |-- motd                      # message of the day
+    |   |-- issue                     # pre-login ASCII banner
+    |   |-- os-release                # distro identity
+    |   |-- default/grub              # GRUB config
+    |   |-- grub.d/05_sirprize_header # GRUB menu header
+    |   |-- profile.d/
+    |   |   \-- sirprize-welcome.sh   # login welcome + quotes
+    |   \-- skel/                     # template for new user homes
+    |       |-- .bashrc               # rainbow prompt + sandwich Easter egg
+    |       |-- .bash_aliases         # fun aliases
+    |       |-- .treasure             # hidden treasure file
+    |       |-- .secret_menu          # secret command list
+    |       |-- .surprise_box/        # surprise box contents
+    |       |   |-- riddle.txt
+    |       |   |-- answer.txt
+    |       |   \-- poem.txt
+    |       \-- .config/
+    |           \-- neofetch/config.conf
+    \-- usr/
+        |-- local/bin/                # Easter egg commands
+        |   |-- surprise, coffee, magic, secret
+        |   |-- party, answer, penguin, vibecheck, dance
+        |   \-- (pong in /usr/local/games/)
+        \-- share/backgrounds/sir-prize/
+            \-- wallpaper.svg         # custom space wallpaper
 ```
 
 ---
@@ -210,7 +210,7 @@ sir-prize-linux/
 Make sure you have internet access and at least 20 GB free.
 
 **Plymouth theme not showing:**
-Normal on some VMs â text mode will fall back gracefully.
+Normal on some VMs -- text mode will fall back gracefully.
 
 **Missing nyancat:**
 Nyancat is built from source during the hook. If GitHub is unreachable during build,
@@ -229,4 +229,4 @@ sudo ./build.sh
 Built with love, `live-build`, and an unhealthy obsession with ASCII art.
 Based on Ubuntu 22.04 LTS. Tux approves.
 
-*Sir Prize Linux â because computers should be fun.*
+*Sir Prize Linux -- because computers should be fun.*

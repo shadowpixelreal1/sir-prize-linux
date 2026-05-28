@@ -3,9 +3,9 @@ echo ""
 echo -e "\e[38;5;213m  Casting spell...\e[0m"
 sleep 0.5
 figlet "ABRACADABRA" 2>/dev/null | lolcat 2>/dev/null \
-    || echo -e "\e[38;5;213m â¨ A B R A C A D A B R A â¨\e[0m"
+    || echo -e "\e[38;5;213m  A B R A C A D A B R A \e[0m"
 sleep 0.5
 echo ""
 fortune 2>/dev/null | cowsay -f $(ls /usr/share/cowsay/cows/ 2>/dev/null | shuf -n1 | sed 's/\.cow//') 2>/dev/null \
-    || echo -e "\e[38;5;220m  â¨ The magic is in you.\e[0m"
+    || echo -e "\e[38;5;220m   The magic is in you.\e[0m"
 echo ""

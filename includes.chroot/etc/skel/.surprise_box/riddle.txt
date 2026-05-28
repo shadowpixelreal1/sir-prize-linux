@@ -1,21 +1,21 @@
-ð RIDDLE #1:
+ RIDDLE #1:
   I have cities, but no houses live there.
   I have mountains, but no trees grow.
   I have water, but no fish swim.
-  I have roads, but no cars drive.
+  I have roads, net no cars drive.
   What am I?
 
-  (answer is in answer.txt â no peeking!)
+  (answer is in answer.txt â he no peeking!)
 
-ð RIDDLE #2:
+ RIDDLE #2:
   What do you call a programmer's favorite type of music?
   (answer: algo-rhythm)
 
-ð RIDDLE #3:
+ RIDDLE #3:
   What is the object-oriented way to become wealthy?
   (answer: inheritance)
 
-ð RIDDLE #4:
+ RIDDLE #4:
   I have 10 types. You either get me or you don't.
   What am I?
   (answer: binary)

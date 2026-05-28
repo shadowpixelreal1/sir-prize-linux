@@ -22,18 +22,18 @@ case "$PICK" in
             || echo "$MSG" | cowsay
         ;;
     cmatrix)
-        echo "ð¾ Entering the Matrix... (Ctrl+C to exit)"
+        echo " Entering the Matrix... (Ctrl+C to exit)"
         sleep 1
         cmatrix -s -b 2>/dev/null || echo "The Matrix has you... but cmatrix isn't installed yet."
         ;;
     sl)
-        sl -e 2>/dev/null || echo "ð Choo choo! (sl not installed yet)"
+        sl -e 2>/dev/null || echo " Choo choo! (sl not installed yet)"
         ;;
     figlet)
         WORDS=("SURPRISE" "SIR PRIZE" "AMAZING" "WOW" "HELLO" "HOORAY" "LINUX")
         WORD="${WORDS[$((RANDOM % ${#WORDS[@]}))]}"
         figlet "$WORD" 2>/dev/null | lolcat 2>/dev/null \
-            || echo "â¨ $WORD â¨"
+            || echo " $WORD "
         ;;
     fortune_cow)
         fortune 2>/dev/null | cowsay -f tux 2>/dev/null | lolcat 2>/dev/null \
@@ -41,23 +41,23 @@ case "$PICK" in
             || echo "Fortune: Be excellent to each other."
         ;;
     nyan)
-        nyancat 2>/dev/null || echo "ð± Nyan nyan nyan! (nyancat not installed yet)"
+        nyancat 2>/dev/null || echo " Nyan nyan nyan! (nyancat not installed yet)"
         ;;
     toilet)
         MSGS=("PARTY" "WOW" "COOL" "YAY" "NICE")
         MSG="${MSGS[$((RANDOM % ${#MSGS[@]}))]}"
         toilet -f bigmono9 --gay "$MSG" 2>/dev/null \
             || figlet "$MSG" 2>/dev/null | lolcat 2>/dev/null \
-            || echo "ð $MSG ð"
+            || echo " $MSG "
         ;;
     aafire)
-        echo "ð¥ Press any key to exit the fire!"
+        echo " Press any key to exit the fire!"
         sleep 1
-        aafire 2>/dev/null || echo "ð¥ (aafire not installed yet)"
+        aafire 2>/dev/null || echo " (aafire not installed yet)"
         ;;
     asciiquarium)
-        echo "ð Welcome to the aquarium! (Ctrl+C to exit)"
+        echo " Welcome to the aquarium! (Ctrl+C to exit)"
         sleep 1
-        asciiquarium 2>/dev/null || echo "ð  (asciiquarium not installed yet)"
+        asciiquarium 2>/dev/null || echo " (asciiquarium not installed yet)"
         ;;
 esac
